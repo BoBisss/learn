@@ -11,7 +11,8 @@ import (
 )
 
 type Config struct {
-	Dsn string
+	Dsn  string
+	Port string
 }
 
 var AppConfig Config

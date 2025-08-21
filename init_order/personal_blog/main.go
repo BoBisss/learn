@@ -8,5 +8,6 @@ import (
 func main() {
 	config.InitConfig()
 	r := router.SetRouter()
-	r.Run(":9001")
+	port := config.AppConfig.Port
+	r.Run(port)
 }
