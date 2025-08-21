@@ -8,6 +8,10 @@ import (
 
 func SetRouter() *gin.Engine {
 	r := gin.Default()
+	
+	// 添加访问日志中间件
+	r.Use(middleware.RequestLogger())
+	
 	auth := r.Group("auth")
 	{
 		auth.POST("/login", controller.Login)
